@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Jerry Cheung"]
   s.email       = ["jch@whatcodecraves.com"]
-  s.homepage    = "http://whatcodecraves.com"
+  s.homepage    = "https://github.com/jch/fstest"
   s.summary     = %q{Extracted file and directory assertion methods from Rails::Generators::TestCase.}
   s.description = %q{Include the FSTest module for testing file existence, and file contents.}
 
