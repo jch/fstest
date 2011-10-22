@@ -34,19 +34,19 @@ so I wrapped it up in the FSTest gem. Enjoy!
 If you want to work with relative paths instead of absolute paths, you can
 set the 'base\_directory' in a setup block.
 
-class MyClassTest < MiniTest::Unit::TestCase
-  include FSTest
+    class MyClassTest < MiniTest::Unit::TestCase
+      include FSTest
 
-  def setup
-    # all assert_file assertions will be relative to your homedir
-    self.base_directory = File.expand_path("~")
-  end
+      def setup
+        # all assert_file assertions will be relative to your homedir
+        self.base_directory = File.expand_path("~")
+      end
 
-  def test_dot_emacs
-    # this will look for ~/.emacs
-    assert_file '.emacs'
-  end
-end
+      def test_dot_emacs
+        # this will look for ~/.emacs
+        assert_file '.emacs'
+      end
+    end
 
 I've also found it useful to use [FakeFS](https://github.com/defunkt/fakefs)
 alongside this.
